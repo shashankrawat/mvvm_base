@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:context=".screens.login_screen.SignInActivity">
+
+
+    <ImageView
+            android:id="@+id/back_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/back_button"
+            android:padding="@dimen/_15sdp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_back_arrow"
+            android:visibility="invisible"/>
+
+
+    <RelativeLayout
+            android:id="@+id/rl_app_logo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/back_btn">
+
+
+        <TextView
+                android:id="@+id/app_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text="@string/app_name"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:textColor="@color/colorAccent"
+                android:textSize="@dimen/_24sdp"
+                android:fontFamily="@font/labelleaurore"/>
+
+        <TextView
+                android:id="@+id/tag_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/app_name"
+                android:layout_centerInParent="true"
+                android:layout_marginStart="@dimen/_16sdp"
+                android:layout_marginLeft="@dimen/_16sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_16sdp"
+                android:layout_marginRight="@dimen/_16sdp"
+                android:fontFamily="@font/gotham_medium"
+                android:gravity="center"
+                android:text="@string/sign_in_tag"
+                android:textSize="@dimen/_15sdp" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+            android:id="@+id/signin_form_rl"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/term_condition_tv"
+            android:layout_below="@+id/rl_app_logo"
+            android:gravity="center">
+
+        <ImageView
+                android:id="@+id/phone_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@android:drawable/stat_sys_phone_call"
+                android:background="@drawable/round_icon_bg"
+                android:padding="@dimen/_15sdp"
+                android:layout_centerHorizontal="true"/>
+
+        <ImageView
+                android:id="@+id/fb_login_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:layout_marginRight="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:contentDescription="@string/facebook_login_button"
+                app:srcCompat="@drawable/facebook"
+                android:layout_below="@id/phone_btn"
+                android:layout_toLeftOf="@id/phone_btn"
+                android:layout_toStartOf="@id/phone_btn"/>
+
+        <ImageView
+                android:id="@+id/insta_login_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:contentDescription="@string/instagram_login_button"
+                app:srcCompat="@drawable/instagram"
+                android:layout_below="@id/phone_btn"
+                android:layout_toRightOf="@id/phone_btn"
+                android:layout_toEndOf="@id/phone_btn"/>
+
+
+    </RelativeLayout>
+
+    <TextView
+            android:id="@+id/term_condition_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerInParent="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:layout_marginRight="@dimen/_10sdp"
+            android:layout_marginBottom="@dimen/_16sdp"
+            android:fontFamily="@font/gotham_book"
+            android:gravity="center"
+            android:text="@string/terms_privacy_text"
+            android:textSize="@dimen/_10sdp" />
+
+</RelativeLayout>
