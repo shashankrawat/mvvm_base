@@ -22,6 +22,7 @@ import androidx.annotation.Nullable;
 
 import android.os.Bundle;
 import androidx.lifecycle.Observer;
+import androidx.lifecycle.ViewModelProvider;
 import androidx.lifecycle.ViewModelProviders;
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -107,7 +108,7 @@ public class SignInActivity extends BaseActivity implements AuthenticationListen
 
 
     private void subscribeViewModel() {
-        model = ViewModelProviders.of(this).get(SignInViewModel.class);
+        model = new ViewModelProvider(this).get(SignInViewModel.class);
         model.fbSignIn().observe(this, new Observer<Resource<String>>() {
             @TargetApi(Build.VERSION_CODES.JELLY_BEAN)
             @Override
